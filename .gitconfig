@@ -1,0 +1,39 @@
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[user]
+	name = Eric Lauffenburger
+	email = elauffenburger@gmail.com
+[core]
+	autocrlf = false
+	safecrlf = false
+	trustctime = false
+[credential]
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+    pm = "!git co $1 && git pull && git co - && git merge $1"
+[diff]
+[diff "tool.winmerge"]
+	cmd = 'C:/Program Files (x86)/WinMerge/WinMergeU.exe' -e $LOCAL $REMOTE
+[diff "tool"]
+	prompt = false
+[difftool]
+	prompt = false
+[gui]
+	recentrepo = C:/git/dh/CIAM
+[push]
+	default = matching
+[merge]
+[mergetool "bc3"]
+	trustExitCode = true
+	cmd = echo
+[mergetool]
+	bc3 = cmd
+[merge]
+	tool = winmerge
+[credential]
+	helper = manager
